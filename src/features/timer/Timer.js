@@ -11,7 +11,12 @@ import { spacing } from '../../utils/sizes';
 
 const DEFAULT_TIME = 1;
 
-export const Timer = ({ focusSubject, onTimerEnd, clearInterval, clearSubject }) => {
+export const Timer = ({
+  focusSubject,
+  onTimerEnd,
+  clearInterval,
+  clearSubject,
+}) => {
   useKeepAwake();
   const [minutes, setMinutes] = useState(DEFAULT_TIME);
   const [isStarted, setIsStarted] = useState(false);
@@ -60,7 +65,7 @@ export const Timer = ({ focusSubject, onTimerEnd, clearInterval, clearSubject })
       <View style={{ paddingTop: spacing.sm }}>
         <ProgressBar
           progress={progress}
-          color="#5e84e2"
+          color='#5e84e2'
           style={{ height: 10 }}
         />
       </View>
@@ -69,13 +74,13 @@ export const Timer = ({ focusSubject, onTimerEnd, clearInterval, clearSubject })
       </View>
       <View style={styles.buttonWrapper}>
         {isStarted ? (
-          <RoundedButton title="pause" onPress={() => setIsStarted(false)} />
+          <RoundedButton title='pauza' onPress={() => setIsStarted(false)} />
         ) : (
-          <RoundedButton title="start" onPress={() => setIsStarted(true)} />
+          <RoundedButton title='start' onPress={() => setIsStarted(true)} />
         )}
       </View>
       <View style={styles.clearSubject}>
-        <RoundedButton size={50} title="-" onPress={() => clearSubject()} />
+        <RoundedButton size={50} title='-' onPress={() => clearSubject()} />
       </View>
     </View>
   );

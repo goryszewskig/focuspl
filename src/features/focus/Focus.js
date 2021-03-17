@@ -3,8 +3,7 @@ import { Text, View, StyleSheet } from 'react-native';
 import { TextInput } from 'react-native-paper';
 
 import { RoundedButton } from '../../components/RoundedButton';
-import {fontSizes, spacing} from '../../utils/sizes'
-
+import { fontSizes, spacing } from '../../utils/sizes';
 
 export const Focus = ({ addSubject }) => {
   const [subject, setSubject] = useState(null);
@@ -21,7 +20,7 @@ export const Focus = ({ addSubject }) => {
           />
           <RoundedButton
             size={50}
-            title="+"
+            title='+'
             onPress={() => {
               addSubject(subject);
             }}
@@ -44,7 +43,7 @@ const styles = StyleSheet.create({
   title: {
     color: 'white',
     fontWeight: 'bold',
-    fontSize: fontSizes.md,
+    fontSize: fontSizes.lg,
   },
   inputContainer: {
     paddingTop: spacing.md,

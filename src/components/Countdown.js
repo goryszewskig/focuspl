@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
     margin: 10,
     fontWeight: 'bold',
     color: 'white',
-    paddingTop: spacing.xxxl,
+    padding: spacing.lg,
     backgroundColor: 'rgba(94, 132,226, 0.3)',
   },
 });

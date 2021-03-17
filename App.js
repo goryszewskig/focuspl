@@ -16,10 +16,10 @@ export default function App() {
   const [focusSubject, setFocusSubject] = useState(null);
   const [focusHistory, setFocusHistory] = useState([]);
 
-  const addFocusHistorySubjectWithStatus = (subject, state) => {
+  const addFocusHistorySubjectWithStatus = (subject, status) => {
     setFocusHistory([
       ...focusHistory,
-      { key: String(focusHistory.length + 1), subject, state },
+      { key: String(focusHistory.length + 1), subject, status },
     ]);
   };
 
@@ -29,7 +29,7 @@ export default function App() {
 
   const saveFocusHistory = async () => {
     try {
-      AsyncStorage.setItem('focusHistory', JSON.stringify(focusHistory));
+      await AsyncStorage.setItem('focusHistory', JSON.stringify(focusHistory));
     } catch (e) {
       console.log(e);
     }
